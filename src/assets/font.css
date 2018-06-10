@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Concert+One);
+.welcome h1 {
+  animation:glow 10s ease-in-out infinite;
+}
+.welcome figure,.welcome figure h1{ box-sizing:border-box; }
+.welcome figure.welcome-figure{
+  animation:wobb 5s ease-in-out infinite;
+  transform-origin:center center;
+  transform-style:preserve-3d;
+}
+@keyframes wobb {
+  0%,100%{ transform:rotate3d(1,1,0,40deg); }
+  25%{ transform:rotate3d(-1,1,0,40deg); }
+  50%{ transform:rotate3d(-1,-1,0,40deg); }
+  75%{ transform:rotate3d(1,-1,0,40deg); }
+}
+.welcome h1 {
+  display:block;
+  width:100%;
+  font:900 2em 'Concert One', sans-serif;
+  text-transform:uppercase;
+  position:absolute;
+  color:#0a0a0a;
+}
+@keyframes glow {
+  0%,100%{ text-shadow:0 0 30px red; }
+  25%{ text-shadow:0 0 30px orange; }
+  50%{ text-shadow:0 0 30px forestgreen; }
+  75%{ text-shadow:0 0 30px cyan; }
+}
+.welcome .welcome-figure>h1:nth-child(2){ transform:translateZ(2px);}
+.welcome .welcome-figure>h1:nth-child(3){ transform:translateZ(4px);}
+.welcome .welcome-figure>h1:nth-child(4){ transform:translateZ(6px);}
+.welcome .welcome-figure>h1:nth-child(5){ transform:translateZ(8px);}

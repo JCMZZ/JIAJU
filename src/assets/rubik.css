@@ -1,0 +1,117 @@
+.box-rubik {
+  width: 150px;
+  margin: 50px;
+  perspective: 600px;
+}
+.box:hover{
+  cursor:pointer;
+}
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 50px auto;
+  position: relative;
+  color: #111;
+  transform-style: preserve-3d;
+}
+.box div:hover{
+  box-shadow:0 0 3px 5px hsla(180, 100%, 50%, 0.714);
+}
+.box div {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  font-size: 3em;
+  font-weight: bold;
+  transform-origin: 50% 50% -75px;
+  backface-visibility: hidden;
+}
+
+.box .side1 {
+  background: hsla(0, 100%, 50%, 0.8);
+  animation: animate1 12s infinite linear;
+}
+
+.box .side2 {
+  background: hsla(60, 100%, 50%, 0.8);
+  animation: animate2 12s infinite linear;
+}
+
+.box .side3 {
+  background: hsla(120, 100%, 50%, 0.8);
+  animation: animate3 12s infinite linear;
+}
+
+.box .side4 {
+  background: hsla(180, 100%, 50%, 0.8);
+  animation: animate4 12s infinite linear;
+}
+
+.box .side5 {
+  background: hsla(240, 100%, 50%, 0.8);
+  animation: animate5 12s infinite linear;
+}
+
+.box .side6 {
+  background: hsla(300, 100%, 50%, 0.8);
+  animation: animate6 12s infinite linear;
+}
+/* for Firefox and IE10 */
+
+@keyframes animate1 {
+  0% {
+    transform: perspective(600px) rotateX(0deg) rotateY(90deg) rotateZ(0deg);
+  }
+  100% {
+    transform: perspective(600px) rotateX(360deg) rotateY(450deg) rotateZ(0deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: perspective(600px) rotateX(0deg) rotateY(270deg) rotateZ(0deg);
+  }
+  100% {
+    transform: perspective(600px) rotateX(360deg) rotateY(630deg) rotateZ(0deg);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: perspective(600px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: perspective(600px) rotateX(450deg) rotateY(0deg) rotateZ(-360deg);
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    transform: perspective(600px) rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: perspective(600px) rotateX(270deg) rotateY(0deg) rotateZ(360deg);
+  }
+}
+
+@keyframes animate5 {
+  0% {
+    transform: perspective(600px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  100% {
+    transform: perspective(600px) rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+
+@keyframes animate6 {
+  0% {
+    transform: perspective(600px) rotateX(0deg) rotateY(180deg) rotateZ(0deg);
+  }
+  100% {
+    transform: perspective(600px) rotateX(360deg) rotateY(540deg) rotateZ(0deg);
+  }
+}

@@ -1,0 +1,61 @@
+.c-btn{
+    position: absolute;
+    width:100%;
+    height:100%;
+}
+.c-btn:after,
+.c-btn:before{
+    content:'';
+    display:block;
+    position:absolute;
+}
+.c-btn--border-line{
+    border:0;
+    background:none;
+    box-sizing:border-box;
+    box-shadow:inset 0 0 0 0px transparent;
+}
+.c-btn--border-line:after,
+.c-btn--border-line:before{
+    box-sizing:border-box;
+    border:3px solid transparent;
+    width:0;
+    height:0;
+    border-radius:5px;
+    outline-color: rgba(255, 255, 255, 0);
+	outline-offset:30px;
+}
+.c-btn--border-line:after{
+    top:0;
+    left:0;
+    transition:border-color 0s ease-in 0.8s,
+    width 0.2s ease-in 0.6s,
+    height 0.2s ease-in 0.4s;
+    box-shadow:-10px 10px 40px rgba(255, 255, 255, 0.7), -10px 10px 40px rgba(255, 255, 255, 0.5);
+}
+.c-btn--border-line:before{
+    bottom:0;
+    right:0;
+    transition:border-color 0s ease-in 0.4s,
+    width 0.2s ease-in 0.2s,
+    height 0.2s ease-in;
+    box-shadow:10px -10px 40px rgba(255, 255, 255, 0.7), 10px -10px 40px rgba(255, 255, 255, 0.5);
+}
+input:focus+div:after,
+input:focus+div:before{
+    width:100%;
+    height:100%;
+}
+input:focus+div:after{	
+    border-top-color:#0ff;
+    border-right-color:#0ff;
+    transition:width 0.2s ease-out,
+    height 0.2s ease-out 0.2s;
+}
+input:focus+div:before{
+    border-bottom-color:#0ff;
+    border-left-color:#0ff;
+    transition:border-color 0s ease-out 0.4s,
+    width 0.2s ease-out 0.4s,
+    height 0.2s ease-out 0.6s;
+}
